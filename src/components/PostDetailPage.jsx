@@ -38,9 +38,10 @@ const PostDetailPage = () => {
     }
   }, [id]);
 
-  if (!post) {
-    return <div>Loading...</div>;
-  }
+if (!post) {
+  return <div className="p-5">Loading...</div>;
+}
+
 
   return (
     <div className="container mx-auto px-4 py-8">
