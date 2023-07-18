@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
-const UserDetailPage = () => {
-  return (
-    <div>UserDetailPage</div>
-  )
-}
+const UserDetailPage = ({userId}) => {
+  // Define states to monitor albums and upload status
+  const [albums, setAlbums] = useState([]);
+  cons [loading, setLoading] = useState(true);
 
-export default UserDetailPage
+  useEffect(() => {
+    // Define the function that brings the albums
+  })
+
+  return <div>UserDetailPage</div>;
+};
+
+export default UserDetailPage;
