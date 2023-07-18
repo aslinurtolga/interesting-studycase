@@ -1,9 +1,42 @@
-import React from 'react'
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 
 const PostDetailPage = () => {
-  return (
-    <div>PostDetailPage</div>
-  )
-}
+  const router = useRouter();
+  const [post, setPost] = useState(null)
 
-export default PostDetailPage
+  useEffect(() => {
+  const fetchPost = async () => {
+  try {
+  const response = await fetch (`https://jsonplaceholder.typicode.com/posts/${id}`);
+  
+  const postData = await response.json();
+  setPost(postData);
+  } catch (error) {
+  console.log("Error fetching post:", error);
+  }
+  }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return <div>PostDetailPage</div>;
+};
+
+export default PostDetailPage;
