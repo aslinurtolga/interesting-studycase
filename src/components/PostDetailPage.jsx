@@ -3,11 +3,12 @@ import React, { useEffect, useState } from "react";
 
 const PostDetailPage = () => {
   const router = useRouter();
+  const { id } = router.query;
   const [post, setPost] = useState(null);
-  const [comments, setComments] = useState([])
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
-  const fetchPost = async () => {
+    const fetchPost = async () => {
       try {
         const response = await fetch(
           `https://jsonplaceholder.typicode.com/posts/${id}`
@@ -20,30 +21,22 @@ const PostDetailPage = () => {
     };
 
     const fetchComments = async () => {
-    try {
-      const response = await fetch (`https://jsonplaceholder.typicode.com/posts/${id}/comments`);
-      const commentsData = await response.json();
-      setComments(commentsData);
-    } catch (error) {
-    console.log("Error fetching comments:", error);
-  }
+      try {
+        const response = await fetch(
+          `https://jsonplaceholder.typicode.com/posts/${id}/comments`
+        );
+        const commentsData = await response.json();
+        setComments(commentsData);
+      } catch (error) {
+        console.log("Error fetching comments:", error);
+      }
     };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if (id) {
+      fetchPost();
+      fetchComments();
+    }
+  }, [id]);
 
 
 
