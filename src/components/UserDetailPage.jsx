@@ -23,7 +23,13 @@ const UserDetailPage = ({ userId }) => {
       }
     };
     // using the useEffect hook, the fetchAlbums function is executed when the component is loaded
-  });
+    fetchAlbums();
+  }, [userId]);
+
+  // checking the loading status, if loading, the message "Loading..." is displayed
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return <div>UserDetailPage</div>;
 };
