@@ -38,7 +38,9 @@ const PostDetailPage = () => {
     }
   }, [id]);
 
-
+  if (!post) {
+    return <div>Loading...</div>;
+  }
 
   return <div>PostDetailPage</div>;
 };
