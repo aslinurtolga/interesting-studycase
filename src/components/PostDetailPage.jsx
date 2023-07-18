@@ -50,14 +50,11 @@ const PostDetailPage = () => {
       <h2 className="text-2xl font-semibold mb-2">Comments</h2>
       <div className="grid grid-cols-1 gap-4">
         {comments.map((comment) => (
-          <div
-            key={comment.id}
-            className="bg-gray-100 p-4 rounded-lg shadow-md"
-          >
+          <div key={comment.id} className="bg-gray-100 p-4 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">{comment.name}</h3>
             <p>{comment.body}</p>
           </div>
-        ))}
+          ))}
       </div>
     </div>
   );
