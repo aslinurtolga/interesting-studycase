@@ -27,7 +27,9 @@ const HomePage = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-blue-500 mb-4">Posts</h1>
+      <h1 className="flex justify-center text-4xl font-bold text-blue-500 mb-4">
+        Posts
+      </h1>
       <div className="grid grid-cols-1 gap-4">
         {posts.map((post) => (
           <div
