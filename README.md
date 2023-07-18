@@ -12,4 +12,4 @@ At the end of the this project, you will be able to;
 
 - use git commands (push, pull, commit, add etc.) and Github as Version Control System.
 
-# Check The Live Website ➡️ [Live Website](https://interesting-studycase.vercel.app/)
+# Check The Live Website ➡️ [Live Website](https://interesting-task-assignment.vercel.app/)
